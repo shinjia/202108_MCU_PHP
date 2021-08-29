@@ -8,6 +8,41 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
+<h2>Class 04 (2021.08.29 下午)</h2>
+<p>客戶意見留言 (comment)</p>
+<ul>
+  <li>程式執行 <a href="comment/input.php">input.php</a> </li>
+  <li>查看原始碼：[<a href="show_source.php?dir=comment&amp;file=input.php">input.php</a>]</li>
+  <li>查看原始碼：[<a href="show_source.php?dir=comment&amp;file=save.php">calc.php</a>]</li>
+</ul>
+
+<p>LINE Notify 訊息傳送 (line)</p>
+<ul>
+  <li>程式執行 <a href="line/send.php">send.php</a> </li>
+  <li>查看原始碼：[<a href="show_source.php?dir=line&amp;file=send.php">send.php</a>]</li>
+</ul>
+
+<p>Survey 各種表單及練習 (v1, v2) (survey)</p>
+<ul>
+  <li>程式執行 <a href="survey/v1/input.php">v1/input.php</a> </li>  
+  <li>程式執行 <a href="survey/v2/input.php">v2/input.php</a> </li>
+</ul>
+
+
+<h2>Class 03 (2021.08.29 上午)</h2>
+
+<p>BMI (bmi)</p>
+<ul>
+  <li>程式執行 <a href="bmi/input.php">input.php</a> </li>
+  <li>查看原始碼：[<a href="show_source.php?dir=bmi&amp;file=input.php">input.php</a>]</li>
+  <li>查看原始碼：[<a href="show_source.php?dir=bmi&amp;file=calc.php">calc.php</a>]</li>
+</ul>
+
+<p>BMI (bmi_php_check) 在 PHP 端做資料檢查</p>
+
+<p>BMI (bmi_js_check) 在前端 JavaScript 做資料檢查</p>
+
+
 
 <h2>Class 02 (2021.08.15 下午)</h2>
 
