@@ -8,6 +8,21 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
+<h2>Class 08 (2021.09.05 下午)</h2>
+<p>本週教學相關的資料夾</p>
+<ul>
+  <li><a href="sequence">sequence</a></li>
+  <li><a href="php_uid_safe">php_uid_save</a></li>
+  <li><a href="php_upload">php_upload</a></li>
+  <li>在 db_mysqli 裡有增加照片上傳的功能</a></li>
+  <li><a href="jQuery-File-Upload">jQuery-File-Upload</a></li>
+  <li><a href="webpages">webpages</a></li>
+</ul>
+
+
+<h2>Class 07 (2021.09.05 上午)</h2>
+<p>(同上週，db_mysqli 系列程式)</p>
+
 
 <h2>Class 06 (2021.09.04 下午)</h2>
   

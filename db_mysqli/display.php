@@ -10,10 +10,15 @@ $link = db_open();
 $sqlstr = "SELECT * FROM person WHERE uid=" . $uid;
 
 // 執行 SQL
-$result = mysqli_query($link, $sqlstr) or die(ERROR_QUERY);
+$result = mysqli_query($link, $sqlstr);
 
 if($row=mysqli_fetch_array($result, MYSQLI_ASSOC))
 {
+  /*
+   echo '<pre>';
+   print_r($row);
+   echo '</pre>';
+  */
    $uid      = $row['uid'];
    $usercode = $row['usercode'];
    $username = $row['username'];
@@ -22,6 +27,15 @@ if($row=mysqli_fetch_array($result, MYSQLI_ASSOC))
    $height   = $row['height'];
    $weight   = $row['weight'];
    $remark   = $row['remark'];
+   
+   $img_show = '';
+   $img_file = 'file/'. $remark;
+   
+   if(file_exists($img_file))
+   {
+      $img_show = '<img src="' . $img_file . '" width="100">';
+   }
+   
 
    $data = <<< HEREDOC
    <table border="1">
@@ -51,7 +65,7 @@ if($row=mysqli_fetch_array($result, MYSQLI_ASSOC))
       </tr>
       <tr>
         <th>備註</th>
-        <td>{$remark}</td>
+        <td>{$remark} {$img_show}</td>
       </tr>
     </table>
 HEREDOC;

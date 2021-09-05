@@ -8,12 +8,14 @@ $link = db_open();
 
 // 寫出 SQL 語法
 $sqlstr = "DELETE FROM person WHERE uid=" . $uid;
+// echo $sqlstr; 
 
 // 執行 SQL
 $result = @mysqli_query($link, $sqlstr);
 if($result)
 {
    $refer = $_SERVER['HTTP_REFERER'];  // 呼叫此程式之前頁
+   // echo $refer; exit;
    header('Location: ' . $refer);
 }
 else

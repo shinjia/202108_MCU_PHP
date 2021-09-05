@@ -54,6 +54,8 @@ switch($op)
         $msg .= $result ? '建立完成！' : '無法建立！<br/>'.mysqli_error($link);
         break;
 
+   case 'HOME':
+        break;
 
   default:
       $msg = '';
@@ -73,8 +75,8 @@ $html = <<< HEREDOC
 <p><a href="index.php">回首頁</a></p>
 <h2>資料庫安裝程式</h2>
 <ul>
-   <li><a href="install.php?op=CREATE_TABLE">安裝資料表 (person)</a></li>
-   <li><a href="install.php?op=DROP_TABLE">移除資料表 (person)</a></li>
+   <li><a href="install.php?op=CREATE_TABLE">安裝資料表 ({$table_name})</a></li>
+   <li><a href="install.php?op=DROP_TABLE">移除資料表 ({$table_name})</a></li>
    <li><a href="install.php?op=CREATE_DATABASE">安裝資料庫 (class)</a></li>
 </ul>
 <hr />

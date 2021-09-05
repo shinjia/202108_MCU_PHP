@@ -2,20 +2,42 @@
 // 含分頁之資料列表
 include 'config.php';
 
+$sort = isset($_GET['sort']) ? $_GET['sort'] : 'DEFAULT';
+
+$sql_sort = " ORDER BY ";
+switch($sort)
+{
+   case 'USERNAME' : 
+        $sql_sort .= 'username';
+        break;
+        
+   case 'HEIGHT' : 
+      $sql_sort .= 'height';
+      break;
+      
+   case 'WEIGHT' : 
+      $sql_sort .= 'weight';
+      break;
+
+   default:
+      $sql_sort .= ' uid';
+}
+
+
+
 $page = isset($_GET['page']) ? $_GET['page'] : 1;   // 目前的頁碼
 
 $numpp = 20; // 每頁的筆數
 
-
 // 連接資料庫
 $link = db_open();
-
 
 // 擷取該分頁資料
 $tmp_start = ($page-1) * $numpp;  // 從第幾筆記錄開始抓取資料
 
-$sqlstr = "SELECT * FROM person ";
+$sqlstr = "SELECT * FROM person " . $sql_sort;
 $sqlstr .= " LIMIT " . $tmp_start . "," . $numpp;
+echo $sqlstr;
 
 $result = mysqli_query($link, $sqlstr);
 
@@ -67,6 +89,14 @@ $total_page = ceil($total_rec / $numpp);  // 計算總頁數
 
 // 分頁之超連結
 $navigator = "";
+
+for($i=1; $i<=$total_page; $i++)
+{
+   $navigator .= "<a href=\"?page=" . $i . "\">" . $i . "</a>&nbsp;";
+}
+
+$navigator .= '<hr>';
+
 for($i=1; $i<=$page-1; $i++)
 {
    $navigator .= "<a href=\"?page=" . $i . "\">" . $i . "</a>&nbsp;";
@@ -96,6 +126,7 @@ $html = <<< HEREDOC
 </head>
 <body>
 <p><a href="index.php">回首頁</a></p>
+<p><a href="?sort=USERNAME">姓名</a> | <a href="?sort=HEIGHT">身高</a>| <a href="?sort=WEIGHT">體重</a> |</p>
 <h2 align="center">共有 $total_rec 筆記錄</h2>
 <table border="0" align="center">
    <tr> 

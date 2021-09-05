@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$uid      = isset($_POST['uid'])      ? $_POST['uid']      : '';
+$uid  = isset($_POST['uid']) ? $_POST['uid'] : '';
 
 $usercode = isset($_POST['usercode']) ? $_POST['usercode'] : '';
 $username = isset($_POST['username']) ? $_POST['username'] : '';
