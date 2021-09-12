@@ -8,6 +8,22 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
+
+<h2>Class 10 (2021.09.12 下午)</h2>
+<p>教學相關的資料夾</p>
+<ul>
+  <li>db_pdo_sth</li>
+</ul>
+
+
+
+<h2>Class 09 (2021.09.12 上午)</h2>
+<p>教學相關的程式檔案</p>
+<ul>
+  <li>db_mysqli 裡的 find.php, find_x.php, find2.php, find2_x.php</li>
+</ul>
+
+
 <h2>Class 08 (2021.09.05 下午)</h2>
 <p>本週教學相關的資料夾</p>
 <ul>

@@ -103,8 +103,31 @@ HEREDOC;
 // ------ 分頁處理結束 -------------------------------------
 
 
+
+// 分頁之超連結
+$navigator = "";
+
+$exp = 3;  // 前後展開的超連結頁數
+$page_begin = ($page-$exp<=0) ? '1' : ($page - $exp);
+$page_end = ($page+$exp>$total_page) ? $total_page : ($page + $exp);
+$prefix1 = ($page_begin>1) ? '… ' : '';  // 最前面加的文字
+$prefix2 = ($page_end<$total_page) ? ' …' : '';  // 最後面加的文字
+
+$navigator .= $prefix1;
+for($i=$page_begin; $i<$page; $i++)
+{
+   $navigator .= '<a href="?page=' . $i . '">' . $i . '</a>&nbsp;';
+}
+$navigator .=  $i . ' ';
+for($i=$page+1; $i<=$page_end; $i++)
+{
+   $navigator .= '<a href="?page=' . $i . '">' . $i . '</a>&nbsp;';
+}
+$navigator .= $prefix2;
+
 $html = <<< HEREDOC
 <h2 align="center">共有 $total_rec 筆記錄</h2>
+{$navigator}</br>
 {$ihc_navigator}
 <table border="1" align="center">   
    <tr>

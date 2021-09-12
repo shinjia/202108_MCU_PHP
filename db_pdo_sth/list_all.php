@@ -68,7 +68,6 @@ else
    $html = error_message('list_all');
 }
 
-
 include 'pagemake.php';
 pagemake($html, '');
 ?>

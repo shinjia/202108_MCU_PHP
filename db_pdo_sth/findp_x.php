@@ -18,6 +18,8 @@ $sqlstr = "SELECT * FROM person ";
 $sqlstr .= "WHERE username LIKE ? ";  // 依條件修改
 $sqlstr .= " LIMIT " . $tmp_start . "," . $numpp;
 
+// $sqlstr .= "SELECT * FROM person WHERE username LIKE '%?%' ";  // 錯誤，依條件修改
+
 $sth = $pdo->prepare($sqlstr);
 
 $keyword = '%' . $key . '%';  // 注意
@@ -78,18 +80,18 @@ HEREDOC;
    $total_page = ceil($total_rec / $numpp);  // 計算總頁數
 
    // 處理分頁之超連結：上一頁、下一頁、第一首、最後頁
-   $lnk_pageprev = '?key=' . $key . '&page=' . (($page==1)?(1):($page-1));
-   $lnk_pagenext = '?key=' . $key . '&page=' . (($page==$total_page)?($total_page):($page+1));
-   $lnk_pagehead = '?key=' . $key . '&page=1';
-   $lnk_pagelast = '?key=' . $key . '&page=' . $total_page;
+   $lnk_pageprev = '?key=' . urlencode($key) . '&page=' . (($page==1)?(1):($page-1));
+   $lnk_pagenext = '?key=' . urlencode($key) . '&page=' . (($page==$total_page)?($total_page):($page+1));
+   $lnk_pagehead = '?key=' . urlencode($key) . '&page=1';
+   $lnk_pagelast = '?key=' . urlencode($key) . '&page=' . $total_page;
 
    // 處理各頁之超連結：列出所有頁數 (暫未用到，保留供參考)
    $lnk_pagelist = '';
    for($i=1; $i<=$page-1; $i++)
-   { $lnk_pagelist .= '<a href="?key=' . $key . '&page='.$i.'">'.$i.'</a> '; }
+   { $lnk_pagelist .= '<a href="?key=' . urlencode($key) . '&page='.$i.'">'.$i.'</a> '; }
    $lnk_pagelist .= '[' . $i . '] ';
    for($i=$page+1; $i<=$total_page; $i++)
-   { $lnk_pagelist .= '<a href="?key=' . $key . '&page='.$i.'">'.$i.'</a> '; }
+   { $lnk_pagelist .= '<a href="?key=' . urlencode($key) . '&page='.$i.'">'.$i.'</a> '; }
 
    // 處理各頁之超連結：下拉式跳頁選單
    $lnk_pagegoto  = '<form method="GET" action="" style="margin:0;">';
