@@ -8,6 +8,15 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
+<h2>Class 11 (2021.09.18 下午)</h2>
+<p>教學相關的資料夾</p>
+<ul>
+  <li>bootstrap5/samples/test</li>
+  <li><a href="db_pdo_sth_bttest/">db_pdo_sth_bttest</a> (上課練習，未完)</li>
+  <li><a href="db2_bootstrap5/">db2_bootstrap5</a></li>
+</ul>
+
+
 <h2>Class 11 (2021.09.18 上午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
