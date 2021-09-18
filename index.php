@@ -8,7 +8,7 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
-<h2>Class 11 (2021.09.18 下午)</h2>
+<h2>Class 12 (2021.09.18 下午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
   <li>bootstrap5/samples/test</li>
@@ -20,16 +20,16 @@
 <h2>Class 11 (2021.09.18 上午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
-  <li>cookie</li>
-  <li>session_login</li>
-  <li>db_pdo_sth_admin (在資料庫後台程式加上 login 權限管理)</li>
+  <li><a href="cookie/">cookie</a></li>
+  <li><a href="session_login/">session_login</a></li>
+  <li><a href="db2_pdo_sth_admin/">db2_pdo_sth_admin</a> (在資料庫後台程式加上 login 權限管理)</li>
 </ul>
 
 
 <h2>Class 10 (2021.09.12 下午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
-  <li>db_pdo_sth</li>
+  <li><a href="db_pdo_sth/">db_pdo_sth</a></li>
 </ul>
 
 
