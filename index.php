@@ -8,6 +8,34 @@
 <body>
 <h1>PHP+MySQL 老師上課實作範例</h1>
 
+<h2>Class 14 (2021.09.19 下午)</h2>
+<p>教學相關的資料夾</p>
+<ul>
+  <li>===AJAX===</li>
+  <li><a href="ajax/">ajax</a> AJAX 觀念與程式</li>
+  <li><a href="ajax_db_demo/">ajax_db_demo</a> AJAX 結合資料庫 db 的範例</li>
+
+  <li>===JSON===</li>
+  <li><a href="json_php/">json_php</a> PHP 處理 JSON 資料</li>
+  <li><a href="db2_json/">db2_json</a> PHP資料庫程式輸出為 JSON</li>
+
+  <li>===API===</li>
+  <li><a href="db2_api/">db2_api</a> PHP as API</li>
+  
+  <li>===SQLite3===</li>
+  <li><a href="db_sqlite3/">db_sqlite3</a> PHP 資料庫程式 - 使用 sqlite3</li>
+  </ul>
+
+
+
+<h2>Class 13 (2021.09.19 上午)</h2>
+<p>教學相關的資料夾</p>
+<ul>
+  <li><a href="my_store/">my_store</a></li>
+</ul>
+
+
+
 <h2>Class 12 (2021.09.18 下午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
@@ -17,6 +45,7 @@
 </ul>
 
 
+
 <h2>Class 11 (2021.09.18 上午)</h2>
 <p>教學相關的資料夾</p>
 <ul>
@@ -24,6 +53,7 @@
   <li><a href="session_login/">session_login</a></li>
   <li><a href="db2_pdo_sth_admin/">db2_pdo_sth_admin</a> (在資料庫後台程式加上 login 權限管理)</li>
 </ul>
+
 
 
 <h2>Class 10 (2021.09.12 下午)</h2>
